@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var methodOverride = require("method-override");
 var app = express();
-
+const port = process.env.PORT || 3000  
 // Connection to DB
 mongoose.connect('mongodb://localhost/clients', function(err, res) {
  if(err) throw err;

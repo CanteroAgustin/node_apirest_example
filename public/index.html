@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="javascript/funciones.js"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Document</title>
+</head>
+<body>
+    <input type="hidden" id="indiceModificar" value="">
+    <div id="contenedor">
+        <div id="divNombre">
+            <label for="nombre">Nombre:&nbsp</label>
+            <input type="text" id="nombre" autocomplete="off" autofocus>
+        </div>    
+        <div id="divEmail">
+            <label for="email">Email:</label>
+            <input type="text" id="email" autocomplete="off">
+            </br>
+            
+        </div>
+        <div id="divGenero">
+            <label for="genero">Genero:</label>
+            <label for="male" class="radio">M</label>
+            <input type="radio" value="male" name="genero">
+            <label for="female">F</label>
+            <input type="radio" value="female" name="genero">
+            </br>
+        </div>
+        <button id="btnGuardar" onclick="guardar()">Guardar</button>
+    </div>
+
+    <h1>Lista personas</h1>
+    <table id="tabla">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Genero</th>
+                <th>Accion</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+            
+        </tbody>
+        </table>
+
+</body>
+</html>

@@ -37,9 +37,18 @@ exports.add = function(req, res) {
 //PUT - Update a register already exists
 exports.update = function(req, res) {
  Client.findById(req.params.id, function(err, client) {
- client.name = req.body.name;
- client.email = req.body.email;
- client.genre = req.body.genre;
+     if(req.body.name != "null"){
+        client.name = req.body.name;
+     }
+     if(req.body.email != ""){
+        console.log(req.body.email);
+        client.email = req.body.email;
+     }
+     if(req.body.genre != "undefined"){
+        console.log(req.body.genre);
+        client.genre = req.body.genre;
+     }
+ 
  client.save(function(err) {
  if(err) return res.send(500, err.message);
  res.status(200).jsonp(client);
